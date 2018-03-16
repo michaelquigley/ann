@@ -26,3 +26,10 @@ add_library(ann
     pr_queue.h
     pr_queue_k.h
 )
+
+install(TARGETS ann LIBRARY ARCHIVE DESTINATION lib)
+install(DIRECTORY "" DESTINATION include/ann FILES_MATCHING PATTERN "ANN*.h")
+
+if("${CMAKE_SYSTEM_NAME}" MATCHES "Windows")
+    install(FILES "${PROJECT_BINARY_DIR}/ann/CMakeFiles/ann.dir/ann.pdb" CONFIGURATIONS Debug DESTINATION lib)
+endif()
