@@ -1,4 +1,4 @@
-#include <ann/ANN.h>
+#include <ANN/ANN.h>
 #include <random>
 
 int main(int argc, char** argv) {
